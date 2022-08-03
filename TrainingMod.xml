@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module name="TrainingMod" type="runtime">
+             
+     <tag name="inputs">
+              
+          <tag name="Input Images" type="resource">
+               <template>
+                    <tag name="label" value="Input Images"/>
+                    <tag name="accepted_type" value="file"/>
+                    <tag name="prohibit_upload" value="True"/>
+               </template>
+          </tag>
+          <tag name="GT seg" type="resource">
+               <template>
+                    <tag name="label" value="GT seg"/>
+                    <tag name="accepted_type" value="file"/>
+                    <tag name="prohibit_upload" value="True"/>
+               </template>
+          </tag>
+          <tag name="Model path" type="resource">
+               <template>
+                    <tag name="label" value="Model path"/>
+                    <tag name="accepted_type" value="file"/>
+                    <tag name="prohibit_upload" value="True"/>
+               </template>
+          </tag>
+          <tag name="mex_url" type="system-input_resource"/>
+          <tag name="bisque_token" type="system-input_resource"/>
+     </tag>
+         
+     <tag name="outputs">
+                  
+          <tag name="NonImage">
+                           
+               <template>
+                                    
+                    <tag name="label" value="Outputs"/>
+                                
+                    <tag name="Model file" type="file"/>
+               </template>
+                       
+          </tag>
+              
+     </tag>
+         
+     <tag name="execute_options">
+                  
+          <tag name="iterable" type="dataset" value="image_url"/>
+              
+     </tag>
+         
+     <tag name="module_options">
+                  
+          <tag name="version" value="1"/>
+              
+     </tag>
+         
+     <tag name="display_options">
+                 
+          <tag name="group" value="Metadata"/>
+              
+     </tag>
+         
+     <tag name="interface">
+                  
+          <tag name="javascript" type="file" value="webapp.js"/>
+                  
+          <tag name="css" type="file" value="webapp.css"/>
+              
+     </tag>
+         
+     <tag name="help" type="file" value="public/help.html"/>
+         
+     <tag name="thumbnail" type="file" value="public/thumbnail.jpg"/>
+            
+     <tag name="title" type="string" value="TrainingMod"/>
+         
+     <tag name="authors" type="string" value="Vikram"/>
+         
+     <tag name="description" type="string" value="This module trains an NPH Segmentation model."/>
+</module>

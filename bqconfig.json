@@ -1,0 +1,1 @@
+{"Name": "TrainingMod", "Author": "Vikram", "Description": "This module trains an NPH Segmentation model.", "Inputs": {"Input Images": "file", "GT seg": "file", "Model path": "file"}, "Outputs": {"Model file": "file"}}
